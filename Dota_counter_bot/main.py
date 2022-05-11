@@ -1,6 +1,4 @@
 import discord
-import requests
-import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from discord.ext import commands
@@ -11,7 +9,7 @@ client = commands.Bot(command_prefix = ":")
 
 @client.command()
 async def counter(ctx, hero1, hero2=''):
-	driver = webdriver.Firefox(executable_path="C:\\Users\\rty35\\Documents\\code\\geckodriver.exe")
+	driver = webdriver.Firefox(executable_path="path to your driver")
 	if(hero2 == ''):
 		driver.get(f"http://dotapicker.com/counterpick#!/E_{hero1}")
 	else:
@@ -34,5 +32,5 @@ async def counter(ctx, hero1, hero2=''):
 
 
 
-client.run("OTczNTMxODE3Nzc5MDIzOTAy.GSA9C6.IHVoIDZ_6n1xfFCkWw6_MPyv7CCrXjZ8nhCD3s")
+client.run("your discord bot tocken")
 
